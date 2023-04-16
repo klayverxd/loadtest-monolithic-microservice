@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:8000"
+  phases:
+    - duration: 20
+      arrivalRate: 200
+  # processor: "./myCustomProcessor.js"
+
+scenarios:
+  - name: "Load Test"
+    flow:
+      - get:
+          url: "/"
+          # capture:
+          #   json: "$.length"
+          # processor: "myCustomProcessor"
